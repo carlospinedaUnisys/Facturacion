@@ -10,6 +10,9 @@ import Swal from 'sweetalert2'
 import { HomePage } from './pages/HomePage';
 import { AdminPage } from './pages/AdminPage';
 import { Login } from './components/Login';
+import { FormTimeRecord } from './components/FormTimeRecord';
+import { TablePendingActivities } from './components/TablePendingActivities';
+        
 
 
 function App() {
@@ -60,14 +63,17 @@ function App() {
 
   return (
     <>
-      <AuthProvider>
-        <IsVisibleMenu />
-        <Routes>
-          <Route path="/" element={<HomePage/>} />
-          <Route path="/admin/aplicaciones" element={<AdminPage/>} />
-          <Route path="/login" element={<Login/>} />
-        </Routes>
-      </AuthProvider>
+        <AuthProvider>
+          <IsVisibleMenu />
+          <Routes>
+            <Route path="/" element={<HomePage/>} />
+            <Route path="/admin/aplicaciones" element={<AdminPage/>} />
+            <Route path="/sabi/timerecord/:idActivity" element={<FormTimeRecord/>} />
+            <Route path="/sabi/timerecord/" element={<FormTimeRecord/>} />
+            <Route path="/sabi/pendingactivities/" element={<TablePendingActivities/>} />
+            <Route path="/login" element={<Login/>} />
+          </Routes>
+        </AuthProvider>
     </>
   )
 }

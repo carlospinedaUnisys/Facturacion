@@ -66,3 +66,11 @@ to {
     opacity: 100;
 }
 }
+
+.infoChange {
+  margin-top: 20px;
+}
+
+.infoSubmit {
+  padding-top: 20px;
+}
